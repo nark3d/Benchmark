@@ -1,0 +1,28 @@
+{
+  "name": "bestservedcold/benchmark",
+  "description": "Benchmark - PHP Standalone Benchmark class.",
+  "keywords": ["Benchmark", "Profiler", "Peformance", "Best Served Cold"],
+  "homepage": "http://bestservedcold.com",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Adam Lewis",
+      "email": "adam.lewis@bestservedcold.com",
+      "homepage": "http://adam.lewis.gb.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "best-served-cold/phalue-objects": "dev-master",
+    "phpunit/phpunit": "^5.7",
+    "mockery/mockery": "^0.9.9",
+    "symfony/console": "^3.2"
+  },
+  "autoload": {
+    "psr-4": {"BestServedCold\\Benchmark\\": "src"}
+  },
+  "autoload-dev": {
+    "psr-4": {"BestServedCold\\Benchmark\\": "tests"}
+  }
+}
