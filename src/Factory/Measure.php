@@ -11,6 +11,12 @@ use BestServedCold\PhalueObjects\Metric\IncludedFile;
 use BestServedCold\PhalueObjects\Metric\MemoryUsage;
 use BestServedCold\PhalueObjects\Metric\MicroTime;
 
+/**
+ * Class Measure
+ *
+ * @package BestServedCold\Benchmark\Factory
+ * @method  static array diff(array $metrics))
+ */
 class Measure extends AbstractFactory
 {
     /**
@@ -27,5 +33,8 @@ class Measure extends AbstractFactory
         DeclaredClass::class,
     ];
 
+    /**
+     * @var array
+     */
     protected static $allowedMethods = [ 'now', 'diff' ];
 }

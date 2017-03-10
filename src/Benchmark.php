@@ -4,10 +4,6 @@ namespace BestServedCold\Benchmark;
 
 use BestServedCold\Benchmark\Factory\Measure;
 use BestServedCold\Benchmark\Factory\Peak;
-use BestServedCold\PhalueObjects\Metric\PeakMemoryUsage;
-use Symfony\Component\Console\Formatter\OutputFormatter;
-use Symfony\Component\Console\Helper\Table;
-use Symfony\Component\Console\Output\ConsoleOutput;
 
 class Benchmark
 {
@@ -22,44 +18,13 @@ class Benchmark
     protected static $lastName;
 
     /**
-     * @param  bool   $name
-     * @return string
+     * Benchmark constructor.
+     *
+     * @param $markers
      */
-    public static function human($name = false)
+    public function __construct($markers)
     {
-        if ($name) {
-            return self::humanFormat(self::$markers[$name]);
-        } else {
-            foreach (self::$markers as $name => $metrics) {
-                echo '[' . $name . "]\n";
-                echo self::humanFormat($metrics);
-            }
-        }
-    }
-
-    public static function humanFormat(array $metrics)
-    {
-        return implode(array_map(function ($metric) {
-            return '[' . $metric->getShortName() . ']: [' . (string) $metric . "]\n";
-        }, $metrics));
-    }
-
-    /**
-     * @param  bool        $name
-     * @return array|mixed
-     */
-    public static function get($name = false)
-    {
-        return $name ? self::$markers[$name] : self::$markers;
-    }
-
-    public static function output($name = false, $interface = false)
-    {
-        $output = new ConsoleOutput(true);
-        $output->setFormatter(new OutputFormatter(true));
-        $table = new Table($output);
-
-        return Format::output(new static, $table, $name, $interface);
+        self::$markers = $markers;
     }
 
     /**
@@ -76,19 +41,25 @@ class Benchmark
     public static function stop($name = false)
     {
         $name ?: self::getLastName();
-        self::$markers[$name] = array_merge(
-            Measure::diff(self::$markers[$name]),
-            Peak::now()
-        );
+        self::$markers[$name] = array_merge(Measure::diff(self::$markers[$name]), Peak::now());
     }
 
     /**
-     * @param $name
+     * @param  bool        $name
+     * @return array|mixed
      */
-    private static function addPeak($name)
+    public static function getMarkers($name = false)
     {
-        $peak = PeakMemoryUsage::now();
-        self::$markers[$name][$peak->getShortName()] = $peak;
+        return $name ? [ $name => self::$markers[$name]] : self::$markers;
+    }
+
+    /**
+     * @param  string|bool $name
+     * @return static
+     */
+    public static function get($name = false)
+    {
+        return $name ? new self([$name => self::$markers[$name]]) : new static(self::$markers);
     }
 
     /**
