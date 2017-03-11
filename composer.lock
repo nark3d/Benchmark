@@ -4,25 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6888c0c15a4b8dc32643f19470641546",
-    "content-hash": "9a8d602b3246d4b8e0ec2edc007919a9",
+    "hash": "c6988384b816da758a49fba1041e5d8f",
+    "content-hash": "6aa9e2367f66d84763e2abc74cbdb6ac",
     "packages": [
         {
             "name": "best-served-cold/html-builder",
-            "version": "1.0.2",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nark3d/HTMLBuilder.git",
-                "reference": "c6c08cbbda938a99adf7faed600fb6c28d1c840d"
+                "reference": "c84c6c3c14d4bafabaa622494344d930644d06dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nark3d/HTMLBuilder/zipball/c6c08cbbda938a99adf7faed600fb6c28d1c840d",
-                "reference": "c6c08cbbda938a99adf7faed600fb6c28d1c840d",
+                "url": "https://api.github.com/repos/nark3d/HTMLBuilder/zipball/c84c6c3c14d4bafabaa622494344d930644d06dc",
+                "reference": "c84c6c3c14d4bafabaa622494344d930644d06dc",
                 "shasum": ""
             },
             "require": {
-                "best-served-cold/phalue-objects": "v0.0.9-alpha",
+                "best-served-cold/phalue-objects": "v0.0.10-alpha",
                 "php": ">=5.6"
             },
             "require-dev": {
@@ -43,7 +43,7 @@
                 {
                     "name": "Adam Lewis",
                     "email": "adam.lewis@bestservedcold.com",
-                    "homepage": "http://adam.lewis.gb.com"
+                    "homepage": "http://adamlewis.gb.com"
                 }
             ],
             "description": "HTML Builder - Build HTML programatically.",
@@ -54,24 +54,24 @@
                 "html",
                 "html builder"
             ],
-            "time": "2017-03-04 16:14:42"
+            "time": "2017-03-11 17:10:25"
         },
         {
             "name": "best-served-cold/phalue-objects",
-            "version": "v0.0.9-alpha",
+            "version": "v0.0.10-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nark3d/PhalueObjects.git",
-                "reference": "fc9588b16f16c1c7921b3f81c3b6cb18e802b18e"
+                "reference": "e01315b83a607a789982aaeabd358611134479dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nark3d/PhalueObjects/zipball/fc9588b16f16c1c7921b3f81c3b6cb18e802b18e",
-                "reference": "fc9588b16f16c1c7921b3f81c3b6cb18e802b18e",
+                "url": "https://api.github.com/repos/nark3d/PhalueObjects/zipball/e01315b83a607a789982aaeabd358611134479dc",
+                "reference": "e01315b83a607a789982aaeabd358611134479dc",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.0",
+                "php": ">=5.6",
                 "sabre/xml": "^1.5",
                 "symfony/finder": "2.*",
                 "symfony/yaml": "2.*"
@@ -97,7 +97,7 @@
                 {
                     "name": "Adam Lewis",
                     "email": "adam.lewis@bestservedcold.com",
-                    "homepage": "http://adam.lewis.gb.com"
+                    "homepage": "http://adamlewis.gb.com"
                 }
             ],
             "description": "Phalue Objects - PHP Value Objects",
@@ -108,7 +108,7 @@
                 "immutable",
                 "value objects"
             ],
-            "time": "2017-03-03 20:48:02"
+            "time": "2017-03-11 17:06:49"
         },
         {
             "name": "psr/log",
@@ -273,16 +273,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.2.4",
+            "version": "v3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "0e5e6899f82230fcb1153bcaf0e106ffaa44b870"
+                "reference": "28fb243a2b5727774ca309ec2d92da240f1af0dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/0e5e6899f82230fcb1153bcaf0e106ffaa44b870",
-                "reference": "0e5e6899f82230fcb1153bcaf0e106ffaa44b870",
+                "url": "https://api.github.com/repos/symfony/console/zipball/28fb243a2b5727774ca309ec2d92da240f1af0dd",
+                "reference": "28fb243a2b5727774ca309ec2d92da240f1af0dd",
                 "shasum": ""
             },
             "require": {
@@ -332,20 +332,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-02-16 14:07:22"
+            "time": "2017-03-06 19:30:27"
         },
         {
             "name": "symfony/debug",
-            "version": "v3.2.4",
+            "version": "v3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "9b98854cb45bc59d100b7d4cc4cf9e05f21026b9"
+                "reference": "b90c9f91ad8ac37d9f114e369042d3226b34dc1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/9b98854cb45bc59d100b7d4cc4cf9e05f21026b9",
-                "reference": "9b98854cb45bc59d100b7d4cc4cf9e05f21026b9",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/b90c9f91ad8ac37d9f114e369042d3226b34dc1a",
+                "reference": "b90c9f91ad8ac37d9f114e369042d3226b34dc1a",
                 "shasum": ""
             },
             "require": {
@@ -389,20 +389,20 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2017-02-16 16:34:18"
+            "time": "2017-02-18 17:28:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v2.8.17",
+            "version": "v2.8.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "355fccac526522dc5fca8ecf0e62749a149f3b8b"
+                "reference": "5fc4b5cab38b9d28be318fcffd8066988e7d9451"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/355fccac526522dc5fca8ecf0e62749a149f3b8b",
-                "reference": "355fccac526522dc5fca8ecf0e62749a149f3b8b",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/5fc4b5cab38b9d28be318fcffd8066988e7d9451",
+                "reference": "5fc4b5cab38b9d28be318fcffd8066988e7d9451",
                 "shasum": ""
             },
             "require": {
@@ -438,7 +438,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2017-01-02 20:30:24"
+            "time": "2017-02-21 08:33:48"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -501,16 +501,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.8.17",
+            "version": "v2.8.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "322a8c2dfbca15ad6b1b27e182899f98ec0e0153"
+                "reference": "2a7bab3c16f6f452c47818fdd08f3b1e49ffcf7d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/322a8c2dfbca15ad6b1b27e182899f98ec0e0153",
-                "reference": "322a8c2dfbca15ad6b1b27e182899f98ec0e0153",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/2a7bab3c16f6f452c47818fdd08f3b1e49ffcf7d",
+                "reference": "2a7bab3c16f6f452c47818fdd08f3b1e49ffcf7d",
                 "shasum": ""
             },
             "require": {
@@ -546,7 +546,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-01-21 16:40:50"
+            "time": "2017-03-01 18:13:50"
         }
     ],
     "packages-dev": [

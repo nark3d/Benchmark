@@ -24,14 +24,17 @@ abstract class AbstractFactory
 
     /**
      * @param  string $name
-     * @param  string $arguments
+     * @param  array $arguments
+     * @throws \Exception
      * @return array
      */
-    public static function __callStatic($name, $arguments)
+    public static function __callStatic($name, array $arguments = [])
     {
         if (in_array($name, static::$allowedMethods)) {
             return self::map($name, empty($arguments) ? static::$metrics : reset($arguments));
         }
+
+        throw new \Exception('[' . $name . '] not an allowed method in context [' . get_class() . ']' . PHP_EOL);
     }
 
     /**
@@ -61,6 +64,6 @@ abstract class AbstractFactory
      */
     public static function metrics(array $metrics)
     {
-        self::$metrics = $metrics;
+        static::$metrics = $metrics;
     }
 }

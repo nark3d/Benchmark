@@ -5,6 +5,11 @@ namespace BestServedCold\Benchmark;
 use BestServedCold\Benchmark\Factory\Measure;
 use BestServedCold\Benchmark\Factory\Peak;
 
+/**
+ * Class Benchmark
+ * 
+ * @package BestServedCold\Benchmark
+ */
 class Benchmark
 {
     /**
@@ -22,26 +27,31 @@ class Benchmark
      *
      * @param $markers
      */
-    public function __construct($markers)
+    public function __construct($markers = [])
     {
         self::$markers = $markers;
     }
 
     /**
-     * @param bool $name
+     * @param  bool|string $name
+     * @return string
      */
     public static function start($name = false)
     {
-        self::$markers[self::getName($name)] = Measure::now();
+        $name = self::getName($name);
+        self::$markers[$name] = Measure::now();
+        return $name;
     }
 
     /**
-     * @param bool $name
+     * @param  bool   $name
+     * @return string
      */
-    public static function stop($name = false)
+    public static function stop($name = null)
     {
-        $name ?: self::getLastName();
+        $name = $name ?: self::getLastName();
         self::$markers[$name] = array_merge(Measure::diff(self::$markers[$name]), Peak::now());
+        return $name;
     }
 
     /**
@@ -80,5 +90,14 @@ class Benchmark
     {
         self::$lastName = $name ?: uniqid();
         return self::$lastName;
+    }
+
+    /**
+     * @return void
+     */
+    public static function reset()
+    {
+        self::$lastName = null;
+        self::$markers  = null;
     }
 }

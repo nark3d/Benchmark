@@ -3,19 +3,25 @@
 namespace BestServedCold\Benchmark;
 
 use BestServedCold\Benchmark\Output\Console;
-use BestServedCold\Benchmark\Output\FormatInterface;
-use BestServedCold\Benchmark\Output\Http;
+use BestServedCold\Benchmark\Output\Html;
 use BestServedCold\Benchmark\Output\OutputInterface;
-use Symfony\Component\Console\Helper\Table;
 
+/**
+ * Class Output
+ *
+ * @package BestServedCold\Benchmark
+ */
 class Output
 {
+    /**
+     * @var array
+     */
     private static $interfaces = [
         Console::class => [
             'cli',
             'cli-server'
         ],
-        Http::class    => [
+        Html::class    => [
             'aolserver',
             'apache',
             'apache2filter',
@@ -38,10 +44,19 @@ class Output
         ]
     ];
 
+    /**
+     * @param  Benchmark            $benchmark
+     * @param  bool|OutputInterface $interface
+     * @throws \Exception
+     * @return string
+     */
     public static function output(Benchmark $benchmark, $interface = false)
     {
-        $interface = self::outputClass($interface ?: php_sapi_name());
-        return $interface::output($benchmark);
+        if (! $class = self::outputClass($interface ?: php_sapi_name())) {
+            throw new \Exception('Interface ['. $interface . '] is unknown.');
+        }
+        
+        return $class::output($benchmark);
     }
 
     /**

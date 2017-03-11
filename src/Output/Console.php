@@ -16,17 +16,26 @@ use Symfony\Component\Console\Helper\TableSeparator;
 class Console extends AbstractOutput implements OutputInterface
 {
     /**
-     * @param Benchmark      $benchmark
-     * @param Table          $table
-     * @param TableSeparator $tableSeparator
+     * @codeCoverageIgnore impossible to test as writes to php://stdout
+     */
+    public function render()
+    {
+        $this->output->render();
+    }
+    
+    /**
+     * @param  Benchmark      $benchmark
+     * @param  Table          $table
+     * @param  TableSeparator $tableSeparator
+     * @return string
      */
     public static function output(Benchmark $benchmark, Table $table = null, TableSeparator $tableSeparator = null)
     {
-        $table          = $table ?: Dependency::symfonyTable();
+        $table          = $table          ?: Dependency::symfonyTable();
         $tableSeparator = $tableSeparator ?: Dependency::symfonyTableSeparator();
         $table->setHeaders(self::$headers);
         self::loopRows($table, $tableSeparator, $benchmark->getMarkers());
-        $table->render();
+        return new static($table);
     }
 
     /**

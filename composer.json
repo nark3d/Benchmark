@@ -13,9 +13,9 @@
     }
   ],
   "require": {
-    "best-served-cold/phalue-objects": "v0.0.9-alpha",
+    "best-served-cold/phalue-objects": "v0.0.10-alpha",
     "symfony/console": "^3.2",
-    "best-served-cold/html-builder": "^1.0"
+    "best-served-cold/html-builder": "^2.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^5.7",

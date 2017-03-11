@@ -2,48 +2,87 @@
 
 namespace BestServedCold\Benchmark\Output;
 
-use BestServedCold\Benchmark\Benchmark;
-use BestServedCold\HTMLBuilder\Builder;
-use BestServedCold\HTMLBuilder\Element;
-use BestServedCold\HTMLBuilder\Output;
-use BestServedCold\PhalueObjects\Metric;
+use BestServedCold\Benchmark\Benchmark,
+    BestServedCold\HTMLBuilder\Output,
+    BestServedCold\HTMLBuilder\Html as HtmlBuilder,
+    BestServedCold\PhalueObjects\Metric,
+    BestServedCold\HTMLBuilder\Html\Node;
 
+/**
+ * Class Html
+ *
+ * @package BestServedCold\Benchmark\Output
+ */
 class Html extends AbstractOutput implements OutputInterface
 {
+    public function render()
+    {
+        echo $this->output->get();
+    }
+    
+    /**
+     * @param  Benchmark $benchmark
+     * @return $this
+     */
     public static function output(Benchmark $benchmark)
     {
-        $table = Builder::table()
-            ->child(self::thead(self::$headers, Builder::thead()))
-            ->child(self::tbody($benchmark, Builder::tbody()));
-
-        echo (new Output($table))->get();
+        return new static((new Output(
+                HtmlBuilder::table(self::tHead(),self::tBody($benchmark)))
+        ));
     }
 
-    private static function tbody(Benchmark $benchmark, Element $tbody)
+    /**
+     * @return Node
+     */
+    private static function tHead()
     {
-        foreach ($benchmark->getMarkers() as $name => $marker)
-        {
-            /** @var Metric $metric */
-            foreach ($marker as $metric) {
-                $tr = Builder::tr();
-                $tr->child(Builder::td()->value($name));
-                $tr->child(Builder::td()->value($metric->getShortName()));
-                $tr->child(Builder::td()->value(static::metricOutput($metric)));
-                $tbody->child($tr);
-            }
-        }
-
-        return $tbody;
+        return HtmlBuilder::thead(HtmlBuilder::tr(self::tHeadMap()));
     }
 
-    private static function thead(array $headers, Element $head)
+    /**
+     * @return array
+     */
+    private static function tHeadMap()
     {
-        $tr = Builder::tr();
-        foreach ($headers as $header) {
-            $tr->child(Builder::th()->value($header));
-        }
+        return array_map(function($header) {
+            return HtmlBuilder::th()->content($header); }, self::$headers
+        );
+    }
 
+    /**
+     * @param  Benchmark $benchmark
+     * @return Node
+     */
+    private static function tBody(Benchmark $benchmark)
+    {
+        return HtmlBuilder::tbody(self::tBodyMap($benchmark)
+        );
+    }
 
-        return $head->child($tr);
+    /**
+     * @param  Benchmark $benchmark
+     * @return array
+     */
+    private static function tBodyMap(Benchmark $benchmark)
+    {
+        return array_map(function($name, $value) {
+            return array_map(function($metric) use ($name) {
+                return self::tBodyRow($metric, $name);
+            }, $value);
+        }, array_keys($benchmark->getMarkers()), $benchmark->getMarkers());
+    }
+
+    /**
+     * @param  Metric $metric
+     * @param  string $name
+     * @return Node
+     */
+    private static function tBodyRow(Metric $metric, $name)
+    {
+         return HtmlBuilder::tr(
+             HtmlBuilder::td()->content($name),
+             HtmlBuilder::td()->content($metric->getShortName()),
+             HtmlBuilder::td()->content(static::metricOutput($metric))
+         );
     }
 }

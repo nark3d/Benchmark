@@ -9,6 +9,7 @@ use BestServedCold\PhalueObjects\Metric\IncludedFile;
 use BestServedCold\PhalueObjects\Metric\DeclaredClass;
 use BestServedCold\PhalueObjects\Metric\DefinedConstant;
 use BestServedCold\PhalueObjects\Metric\DefinedFunction;
+use Symfony\Component\Console\Output\OutputInterface;
 
 /**
  * Class AbstractOutput
@@ -35,6 +36,21 @@ abstract class AbstractOutput
     protected static $headers = ['Name', 'Metric', 'Value'];
 
     /**
+     * @var OutputInterface|Html
+     */
+    protected $output;
+
+    /**
+     * AbstractOutput constructor.
+     *
+     * @param $output
+     */
+    public function __construct($output)
+    {
+        $this->output = $output;
+    }
+
+    /**
      * @param  Metric     $metric
      * @return int|string
      */
@@ -43,6 +59,11 @@ abstract class AbstractOutput
         return in_array(get_class($metric), self::$countMetrics) ? $metric->count() : (string) $metric;
     }
 
+    /**
+     * @param  Metric $metric
+     * @param  string $name
+     * @return array
+     */
     protected static function populateRow(Metric $metric, $name)
     {
         return [$name, $metric->getShortName(), static::metricOutput($metric)];
