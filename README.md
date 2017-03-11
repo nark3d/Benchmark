@@ -84,7 +84,8 @@ Returns something like:
 
 ## Specifying output interface
 
-```php Benchmark::reset();
+```php 
+Benchmark::reset();
 Benchmark::start('susan');
 require_on
 ce('./SomeTrait.php');
