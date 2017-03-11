@@ -93,8 +93,7 @@ Returns something like:
 ```php 
 Benchmark::reset();
 Benchmark::start('susan');
-require_on
-ce('./SomeTrait.php');
+require_once('./SomeTrait.php');
 Benchmark::stop('susan');
 Output::output(Benchmark::get(), 'apache')->render();
 ```
