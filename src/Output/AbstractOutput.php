@@ -11,6 +11,7 @@ use BestServedCold\HTMLBuilder\Output,
     BestServedCold\PhalueObjects\Metric\DefinedConstant,
     BestServedCold\PhalueObjects\Metric\DefinedFunction,
     Symfony\Component\Console\Output\OutputInterface as SymfonyOutputInterface;
+use Symfony\Component\Console\Helper\Table;
 
 /**
  * Class AbstractOutput
@@ -37,7 +38,7 @@ abstract class AbstractOutput
     protected static $headers = ['Name', 'Metric', 'Value'];
 
     /**
-     * @var Output|SymfonyOutputInterface
+     * @var Output|Table
      */
     protected $output;
 
