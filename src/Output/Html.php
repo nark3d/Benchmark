@@ -2,11 +2,11 @@
 
 namespace BestServedCold\Benchmark\Output;
 
-use BestServedCold\Benchmark\Benchmark,
-    BestServedCold\HTMLBuilder\Output,
-    BestServedCold\HTMLBuilder\Html as HtmlBuilder,
-    BestServedCold\PhalueObjects\Metric,
-    BestServedCold\HTMLBuilder\Html\Node;
+use BestServedCold\Benchmark\Benchmark;
+use BestServedCold\HTMLBuilder\Output;
+use BestServedCold\HTMLBuilder\Html as HtmlBuilder;
+use BestServedCold\PhalueObjects\Metric;
+use BestServedCold\HTMLBuilder\Html\Node;
 
 /**
  * Class Html

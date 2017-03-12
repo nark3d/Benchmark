@@ -27,7 +27,7 @@ class Console extends AbstractOutput implements OutputInterface
      * @param  Benchmark      $benchmark
      * @param  Table          $table
      * @param  TableSeparator $tableSeparator
-     * @return string
+     * @return Console
      */
     public static function output(Benchmark $benchmark, Table $table = null, TableSeparator $tableSeparator = null)
     {
