@@ -15,11 +15,6 @@ use BestServedCold\HTMLBuilder\Html\Node;
  */
 class Html extends AbstractOutput implements HTMLOutputInterface
 {
-    public function render()
-    {
-        echo $this->output->get();
-    }
-    
     /**
      * @param  Benchmark $benchmark
      * @return $this

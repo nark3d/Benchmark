@@ -52,6 +52,11 @@ abstract class AbstractOutput
         $this->output = $output;
     }
 
+    public function render()
+    {
+        return $this->output->render();
+    }
+    
     /**
      * @param  Metric     $metric
      * @return int|string

@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "best-served-cold/html-builder",
-            "version": "2.0.5",
+            "version": "2.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nark3d/HTMLBuilder.git",
-                "reference": "c48470fd9a71eb35793e04a22163ed3db94a8f29"
+                "reference": "e4859dd9e5672d14bf59cdec670c9fc2dca8140e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nark3d/HTMLBuilder/zipball/c48470fd9a71eb35793e04a22163ed3db94a8f29",
-                "reference": "c48470fd9a71eb35793e04a22163ed3db94a8f29",
+                "url": "https://api.github.com/repos/nark3d/HTMLBuilder/zipball/e4859dd9e5672d14bf59cdec670c9fc2dca8140e",
+                "reference": "e4859dd9e5672d14bf59cdec670c9fc2dca8140e",
                 "shasum": ""
             },
             "require": {
@@ -54,7 +54,7 @@
                 "html",
                 "html builder"
             ],
-            "time": "2017-03-12 13:53:38"
+            "time": "2017-03-12 14:33:05"
         },
         {
             "name": "best-served-cold/phalue-objects",
