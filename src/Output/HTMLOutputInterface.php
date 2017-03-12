@@ -9,7 +9,7 @@ use BestServedCold\Benchmark\Benchmark;
  *
  * @package BestServedCold\Benchmark\Output
  */
-interface OutputInterface
+interface HTMLOutputInterface
 {
     /**
      * @return mixed

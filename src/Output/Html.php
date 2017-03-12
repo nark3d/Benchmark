@@ -13,11 +13,8 @@ use BestServedCold\HTMLBuilder\Html\Node;
  *
  * @package BestServedCold\Benchmark\Output
  */
-class Html extends AbstractOutput implements OutputInterface
+class Html extends AbstractOutput implements HTMLOutputInterface
 {
-    /**
-     * 
-     */
     public function render()
     {
         echo $this->output->get();

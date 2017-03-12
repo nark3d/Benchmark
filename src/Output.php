@@ -4,7 +4,7 @@ namespace BestServedCold\Benchmark;
 
 use BestServedCold\Benchmark\Output\Console;
 use BestServedCold\Benchmark\Output\Html;
-use BestServedCold\Benchmark\Output\OutputInterface;
+use BestServedCold\Benchmark\Output\HTMLOutputInterface;
 
 /**
  * Class Output
@@ -51,7 +51,7 @@ class Output
 
     /**
      * @param  Benchmark            $benchmark
-     * @param  bool|OutputInterface $interface
+     * @param  bool|HTMLOutputInterface $interface
      * @throws \Exception
      * @return string
      */
@@ -66,7 +66,7 @@ class Output
 
     /**
      * @param  $sapi
-     * @return OutputInterface
+     * @return HTMLOutputInterface
      */
     private static function outputClass($sapi)
     {

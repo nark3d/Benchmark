@@ -13,7 +13,7 @@ use BestServedCold\Benchmark\Benchmark,
  *
  * @package BestServedCold\Benchmark\Output
  */
-class Console extends AbstractOutput implements OutputInterface
+class Console extends AbstractOutput implements HTMLOutputInterface
 {
     /**
      * @codeCoverageIgnore impossible to test as writes to php://stdout
@@ -61,7 +61,7 @@ class Console extends AbstractOutput implements OutputInterface
     {
         /** @var Metric $metric */
         foreach ($metrics as $metric) {
-            $table->addRow(parent::populateRow($metric, $name));
+            $table->addRow(static::populateRow($metric, $name));
         }
 
         return $table;
