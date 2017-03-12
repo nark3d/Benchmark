@@ -10,8 +10,7 @@ use BestServedCold\HTMLBuilder\Output,
     BestServedCold\PhalueObjects\Metric\DeclaredClass,
     BestServedCold\PhalueObjects\Metric\DefinedConstant,
     BestServedCold\PhalueObjects\Metric\DefinedFunction,
-    Symfony\Component\Console\Output\OutputInterface as SymfonyOutputInterface;
-use Symfony\Component\Console\Helper\Table;
+    Symfony\Component\Console\Helper\Table;
 
 /**
  * Class AbstractOutput
