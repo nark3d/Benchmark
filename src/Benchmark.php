@@ -98,6 +98,6 @@ class Benchmark
     public static function reset()
     {
         self::$lastName = null;
-        self::$markers  = null;
+        self::$markers  = [];
     }
 }
