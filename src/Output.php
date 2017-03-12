@@ -50,12 +50,12 @@ class Output
     public function __construct() {}
 
     /**
-     * @param  Benchmark            $benchmark
-     * @param  bool|HTMLOutputInterface $interface
+     * @param  Benchmark   $benchmark
+     * @param  null|string $interface
      * @throws \Exception
      * @return string
      */
-    public static function output(Benchmark $benchmark, $interface = false)
+    public static function output(Benchmark $benchmark, $interface = null)
     {
         if (! $class = self::outputClass($interface ?: php_sapi_name())) {
             throw new \Exception('Interface ['. $interface . '] is unknown.');

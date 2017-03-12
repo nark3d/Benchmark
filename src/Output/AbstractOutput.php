@@ -54,7 +54,7 @@ abstract class AbstractOutput
 
     public function render()
     {
-        return $this->output->render();
+        $this->output->render();
     }
     
     /**

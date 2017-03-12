@@ -22,7 +22,7 @@ class Dependency
      */
     public static function symfonyConsoleOutput()
     {
-        $output = new ConsoleOutput(1);
+        $output = new ConsoleOutput();
         $output->setFormatter(self::symfonyOutputFormatter());
         return $output;
     }

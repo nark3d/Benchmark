@@ -20,7 +20,7 @@ class Console extends AbstractOutput implements HTMLOutputInterface
      */
     public function render()
     {
-        $this->output->render();
+        parent::render();
     }
     
     /**
@@ -36,6 +36,7 @@ class Console extends AbstractOutput implements HTMLOutputInterface
         $table->setHeaders(self::$headers);
         self::loopRows($table, $tableSeparator, $benchmark->getMarkers());
         return new static($table);
+
     }
 
     /**

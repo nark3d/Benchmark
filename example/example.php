@@ -21,7 +21,6 @@ Benchmark::start('mary');
 require_once('./SomeClass.php');
 sleep(1);
 Benchmark::stop('mary');
-
 Output::output(Benchmark::get())->render();
 
 Benchmark::reset();
