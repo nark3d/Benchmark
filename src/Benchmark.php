@@ -2,8 +2,8 @@
 
 namespace BestServedCold\Benchmark;
 
-use BestServedCold\Benchmark\Factory\Measure;
-use BestServedCold\Benchmark\Factory\Peak;
+use BestServedCold\Benchmark\Factory\Measure,
+    BestServedCold\Benchmark\Factory\Peak;
 
 /**
  * Class Benchmark
@@ -25,7 +25,7 @@ class Benchmark
     /**
      * Benchmark constructor.
      *
-     * @param $markers
+     * @param array $markers
      */
     public function __construct($markers = [])
     {
@@ -33,10 +33,10 @@ class Benchmark
     }
 
     /**
-     * @param  bool|string $name
+     * @param  null|string $name
      * @return string
      */
-    public static function start($name = false)
+    public static function start($name = null)
     {
         $name = self::getName($name);
         self::$markers[$name] = Measure::now();
@@ -44,7 +44,7 @@ class Benchmark
     }
 
     /**
-     * @param  bool   $name
+     * @param  null|string $name
      * @return string
      */
     public static function stop($name = null)
@@ -55,19 +55,19 @@ class Benchmark
     }
 
     /**
-     * @param  bool        $name
+     * @param  null|string $name
      * @return array|mixed
      */
-    public static function getMarkers($name = false)
+    public static function getMarkers($name = null)
     {
         return $name ? [ $name => self::$markers[$name]] : self::$markers;
     }
 
     /**
-     * @param  string|bool $name
+     * @param  string|null $name
      * @return static
      */
-    public static function get($name = false)
+    public static function get($name = null)
     {
         return $name ? new self([$name => self::$markers[$name]]) : new static(self::$markers);
     }
@@ -83,10 +83,10 @@ class Benchmark
     }
 
     /**
-     * @param  bool   $name
+     * @param  null|string   $name
      * @return string
      */
-    private static function getName($name = false)
+    private static function getName($name = null)
     {
         self::$lastName = $name ?: uniqid();
         return self::$lastName;

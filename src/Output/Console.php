@@ -2,11 +2,11 @@
 
 namespace BestServedCold\Benchmark\Output;
 
-use BestServedCold\Benchmark\Benchmark;
-use BestServedCold\Benchmark\Dependency;
-use BestServedCold\PhalueObjects\Metric;
-use Symfony\Component\Console\Helper\Table;
-use Symfony\Component\Console\Helper\TableSeparator;
+use BestServedCold\Benchmark\Benchmark,
+    BestServedCold\Benchmark\Dependency,
+    BestServedCold\PhalueObjects\Metric,
+    Symfony\Component\Console\Helper\Table,
+    Symfony\Component\Console\Helper\TableSeparator;
 
 /**
  * Class Console
@@ -54,10 +54,10 @@ class Console extends AbstractOutput implements OutputInterface
     /**
      * @param  Table       $table
      * @param  array       $metrics
-     * @param  bool|string $name
+     * @param  null|string $name
      * @return Table
      */
-    protected static function addRow(Table $table, array $metrics, $name)
+    protected static function addRow(Table $table, array $metrics, $name = null)
     {
         /** @var Metric $metric */
         foreach ($metrics as $metric) {

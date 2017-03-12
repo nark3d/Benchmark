@@ -3,8 +3,8 @@
 namespace BestServedCold\Benchmark\Output;
 
 use BestServedCold\Benchmark\Benchmark,
-    BestServedCold\Benchmark\TestCase;
-use BestServedCold\Benchmark\Output;
+    BestServedCold\Benchmark\TestCase,
+    BestServedCold\Benchmark\Output;
 
 class HtmlTest extends TestCase
 {

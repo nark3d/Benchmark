@@ -45,6 +45,11 @@ class Output
     ];
 
     /**
+     * Output constructor.
+     */
+    public function __construct() {}
+
+    /**
      * @param  Benchmark            $benchmark
      * @param  bool|OutputInterface $interface
      * @throws \Exception
@@ -65,7 +70,7 @@ class Output
      */
     private static function outputClass($sapi)
     {
-        foreach (static::$interfaces as $key => $value) {
+        foreach (self::$interfaces as $key => $value) {
             if (in_array($sapi, $value)) {
                 return $key;
             }

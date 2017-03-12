@@ -2,14 +2,14 @@
 
 namespace BestServedCold\Benchmark\Factory;
 
-use BestServedCold\PhalueObjects\Metric\DeclaredClass;
-use BestServedCold\PhalueObjects\Metric\DeclaredInterface;
-use BestServedCold\PhalueObjects\Metric\DeclaredTrait;
-use BestServedCold\PhalueObjects\Metric\DefinedConstant;
-use BestServedCold\PhalueObjects\Metric\DefinedFunction;
-use BestServedCold\PhalueObjects\Metric\IncludedFile;
-use BestServedCold\PhalueObjects\Metric\MemoryUsage;
-use BestServedCold\PhalueObjects\Metric\MicroTime;
+use BestServedCold\PhalueObjects\Metric\DeclaredClass,
+    BestServedCold\PhalueObjects\Metric\DeclaredInterface,
+    BestServedCold\PhalueObjects\Metric\DeclaredTrait,
+    BestServedCold\PhalueObjects\Metric\DefinedConstant,
+    BestServedCold\PhalueObjects\Metric\DefinedFunction,
+    BestServedCold\PhalueObjects\Metric\IncludedFile,
+    BestServedCold\PhalueObjects\Metric\MemoryUsage,
+    BestServedCold\PhalueObjects\Metric\MicroTime;
 
 /**
  * Class Measure

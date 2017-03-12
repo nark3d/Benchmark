@@ -2,10 +2,10 @@
 
 namespace BestServedCold\Benchmark;
 
-use Symfony\Component\Console\Formatter\OutputFormatter;
-use Symfony\Component\Console\Helper\Table;
-use Symfony\Component\Console\Helper\TableSeparator;
-use Symfony\Component\Console\Output\ConsoleOutput;
+use Symfony\Component\Console\Formatter\OutputFormatter,
+    Symfony\Component\Console\Helper\Table,
+    Symfony\Component\Console\Helper\TableSeparator,
+    Symfony\Component\Console\Output\ConsoleOutput;
 
 class Dependency
 {
@@ -22,7 +22,7 @@ class Dependency
      */
     public static function symfonyConsoleOutput()
     {
-        $output = new ConsoleOutput(true);
+        $output = new ConsoleOutput(1);
         $output->setFormatter(self::symfonyOutputFormatter());
         return $output;
     }

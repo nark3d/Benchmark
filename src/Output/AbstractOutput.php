@@ -2,14 +2,14 @@
 
 namespace BestServedCold\Benchmark\Output;
 
-use BestServedCold\PhalueObjects\Metric;
-use BestServedCold\PhalueObjects\Metric\DeclaredInterface;
-use BestServedCold\PhalueObjects\Metric\DeclaredTrait;
-use BestServedCold\PhalueObjects\Metric\IncludedFile;
-use BestServedCold\PhalueObjects\Metric\DeclaredClass;
-use BestServedCold\PhalueObjects\Metric\DefinedConstant;
-use BestServedCold\PhalueObjects\Metric\DefinedFunction;
-use Symfony\Component\Console\Output\OutputInterface;
+use BestServedCold\PhalueObjects\Metric,
+    BestServedCold\PhalueObjects\Metric\DeclaredInterface,
+    BestServedCold\PhalueObjects\Metric\DeclaredTrait,
+    BestServedCold\PhalueObjects\Metric\IncludedFile,
+    BestServedCold\PhalueObjects\Metric\DeclaredClass,
+    BestServedCold\PhalueObjects\Metric\DefinedConstant,
+    BestServedCold\PhalueObjects\Metric\DefinedFunction,
+    Symfony\Component\Console\Output\OutputInterface as SymfonyOutputInterface;
 
 /**
  * Class AbstractOutput
@@ -36,7 +36,7 @@ abstract class AbstractOutput
     protected static $headers = ['Name', 'Metric', 'Value'];
 
     /**
-     * @var OutputInterface|Html
+     * @var SymfonyOutputInterface|Html
      */
     protected $output;
 

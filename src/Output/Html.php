@@ -15,6 +15,9 @@ use BestServedCold\Benchmark\Benchmark,
  */
 class Html extends AbstractOutput implements OutputInterface
 {
+    /**
+     * 
+     */
     public function render()
     {
         echo $this->output->get();
@@ -27,7 +30,7 @@ class Html extends AbstractOutput implements OutputInterface
     public static function output(Benchmark $benchmark)
     {
         return new static((new Output(
-                HtmlBuilder::table(self::tHead(),self::tBody($benchmark)))
+                HtmlBuilder::table(self::tHead(), self::tBody($benchmark)))
         ));
     }
 
