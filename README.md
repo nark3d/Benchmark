@@ -3,6 +3,7 @@
 [![Code Coverage](https://scrutinizer-ci.com/g/nark3d/Benchmark/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/nark3d/Benchmark/?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nark3d/Benchmark/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nark3d/Benchmark/?branch=master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/7d251e4e-96df-4a50-b6f7-7fa148982678/mini.png)](https://insight.sensiolabs.com/projects/7d251e4e-96df-4a50-b6f7-7fa148982678)
+[![Latest Stable Version](https://img.shields.io/packagist/v/best-served-cold/benchmark.svg)](https://packagist.org/packages/best-served-cold/benchmark)
 
 # Benchmark
 
