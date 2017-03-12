@@ -2,7 +2,8 @@
 
 namespace BestServedCold\Benchmark\Output;
 
-use BestServedCold\PhalueObjects\Metric,
+use BestServedCold\HTMLBuilder\Output,
+    BestServedCold\PhalueObjects\Metric,
     BestServedCold\PhalueObjects\Metric\DeclaredInterface,
     BestServedCold\PhalueObjects\Metric\DeclaredTrait,
     BestServedCold\PhalueObjects\Metric\IncludedFile,
@@ -36,7 +37,7 @@ abstract class AbstractOutput
     protected static $headers = ['Name', 'Metric', 'Value'];
 
     /**
-     * @var SymfonyOutputInterface|Html
+     * @var Output|SymfonyOutputInterface
      */
     protected $output;
 
