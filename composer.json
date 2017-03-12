@@ -13,7 +13,7 @@
     }
   ],
   "require": {
-    "best-served-cold/phalue-objects": "v0.0.10-alpha",
+    "best-served-cold/phalue-objects": "v0.0.11-alpha",
     "symfony/console": "^3.2",
     "best-served-cold/html-builder": "^2.0"
   },

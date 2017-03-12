@@ -4,25 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c6988384b816da758a49fba1041e5d8f",
-    "content-hash": "6aa9e2367f66d84763e2abc74cbdb6ac",
+    "hash": "6687468c64ba5a48ca24ea2a46e72d28",
+    "content-hash": "76ea48ae3e8a8cf8be61da0cd5e13447",
     "packages": [
         {
             "name": "best-served-cold/html-builder",
-            "version": "2.0.2",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nark3d/HTMLBuilder.git",
-                "reference": "c84c6c3c14d4bafabaa622494344d930644d06dc"
+                "reference": "6ec1b24ed16d297af583de7937ea66939b0a93b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nark3d/HTMLBuilder/zipball/c84c6c3c14d4bafabaa622494344d930644d06dc",
-                "reference": "c84c6c3c14d4bafabaa622494344d930644d06dc",
+                "url": "https://api.github.com/repos/nark3d/HTMLBuilder/zipball/6ec1b24ed16d297af583de7937ea66939b0a93b5",
+                "reference": "6ec1b24ed16d297af583de7937ea66939b0a93b5",
                 "shasum": ""
             },
             "require": {
-                "best-served-cold/phalue-objects": "v0.0.10-alpha",
+                "best-served-cold/phalue-objects": "v0.0.11-alpha",
                 "php": ">=5.6"
             },
             "require-dev": {
@@ -54,20 +54,20 @@
                 "html",
                 "html builder"
             ],
-            "time": "2017-03-11 17:10:25"
+            "time": "2017-03-12 13:09:25"
         },
         {
             "name": "best-served-cold/phalue-objects",
-            "version": "v0.0.10-alpha",
+            "version": "v0.0.11-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nark3d/PhalueObjects.git",
-                "reference": "e01315b83a607a789982aaeabd358611134479dc"
+                "reference": "ab5a7edfb26e3cc966e9a1f67a3f0e342176fd8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nark3d/PhalueObjects/zipball/e01315b83a607a789982aaeabd358611134479dc",
-                "reference": "e01315b83a607a789982aaeabd358611134479dc",
+                "url": "https://api.github.com/repos/nark3d/PhalueObjects/zipball/ab5a7edfb26e3cc966e9a1f67a3f0e342176fd8b",
+                "reference": "ab5a7edfb26e3cc966e9a1f67a3f0e342176fd8b",
                 "shasum": ""
             },
             "require": {
@@ -108,7 +108,7 @@
                 "immutable",
                 "value objects"
             ],
-            "time": "2017-03-11 17:06:49"
+            "time": "2017-03-12 13:06:57"
         },
         {
             "name": "psr/log",
